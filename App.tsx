@@ -1,3 +1,4 @@
+import { Image } from "expo-image";
 import { StatusBar } from "expo-status-bar";
 import { Alert, Linking, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { theme } from "./theme";
@@ -9,7 +10,7 @@ export default function App() {
       {
         text: "No",
         style: "destructive",
-        onPress: () => console.log("Not signed up :(")
+        onPress: () => console.log("Not signed up :("),
       },
       {
         text: "Yes",
@@ -21,6 +22,12 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Image
+        style={styles.headerImage}
+        source={"https://static.mlh.io/brand-assets/logo/official/mlh-logo-color.png"}
+        transition={1000}
+        contentFit="contain"
+      />
       <Text style={styles.headLineText}>Global Hack Week</Text>
       <Text style={styles.bodyText}>
         Each month we host a Global Hack Week where you can learn new skills, build your portfolio,
@@ -43,6 +50,11 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.white,
     flex: 1,
     justifyContent: "center",
+  },
+  headerImage: {
+    
+    height: 300,
+    width: 300,
   },
   headLineText: {
     ...theme.textVariants.headLine,
