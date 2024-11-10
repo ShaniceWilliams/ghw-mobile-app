@@ -2,7 +2,11 @@ export const theme = {
   colors: {
     white: "#ffffff",
     black: "#000000",
-    primaryButton: "#5a43f4"
+    primaryButton: "#5a43f4",
+    darkGrey: "#1c1c1e",
+    lightGrey: "#f2f2f2",
+    borderColor: "#D3D3D3",
+    red: "#d05858",
   },
   textVariants: {
     headLine: {
